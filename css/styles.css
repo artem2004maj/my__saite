@@ -1,6 +1,9 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    background: url('side_pict.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #000; /* Цвет текста на фоне */
 }
 
 
@@ -10,3 +13,19 @@ body {
 
 }
 
+.uk-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон для карточек */
+    color: #000; /* Цвет текста в карточках */
+}
+
+.uk-navbar-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для навигационной панели */
+}
+
+.uk-section-secondary {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для подвала */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000; /* Цвет заголовков */
+}
