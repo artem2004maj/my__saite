@@ -1,6 +1,5 @@
 
 body {
-    font-family: 'Courier New', Courier, monospace;
     background: url('side_pict.png') no-repeat center center fixed;
     background-size: cover;
     color: #000; /* Цвет текста на фоне */
