@@ -22,6 +22,7 @@
             height: auto;
             display: block;
             margin: 20px auto;
+            cursor: pointer;
         }
 
         /* Адаптивные стили для мобильных устройств */
@@ -73,7 +74,7 @@
                 <p>С уважением, редактор сайта "JSON и работа с ним различными языками программирования".</p>
 
                 <!-- Добавление картинки -->
-                <img src="kit_ti_mamu_mav.png" alt="Заключение" class="conclusion-image">
+                <img src="kit_ti_mamu_mav.png" alt="Заключение" class="conclusion-image" id="conclusionImage">
                 
                 <nav class="uk-pagination uk-margin">
                     <ul class="uk-pagination">
@@ -109,6 +110,12 @@
 
     // Добавляем обработчик события прокрутки
     window.addEventListener('scroll', toggleNavbar);
+
+    // Добавляем обработчик события для картинки
+    document.getElementById('conclusionImage').addEventListener('click', function() {
+        const audio = new Audio('sound.mp3'); // Путь к звуковому файлу
+        audio.play();
+    });
 </script>
 
 </body>
