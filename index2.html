@@ -209,6 +209,33 @@ json_string = json.dumps(data, indent=4)
 json_string = json.dumps(data, indent=4, sort_keys=True)
                     </code></pre>
                 </div> 
+                <h3>Обработка ошибок</h3>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <p class="uk-card-title">При десериализации некорректной JSON-строки будет выброшено исключение json.JSONDecodeError.</p>
+                    <pre><code class="uk-code uk-text-break">
+try:
+    parsed_data = json.loads('{"name": "John", "age": 30,}')
+except json.JSONDecodeError as e:
+    print(f"Ошибка десериализации JSON: {e}")
+                    </code></pre>
+                </div>
+                <h3>Работа с пользовательскими объектами:</h3>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <p class="uk-card-title">По умолчанию модуль json не может сериализовать пользовательские объекты. Для этого нужно определить методы __dict__ или использовать собственные функции сериализации и десериализации.</p>
+                    <pre><code class="uk-code uk-text-break">
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+                    
+    def to_json(self):
+        return {"name": self.name, "age": self.age}
+                    
+person = Person("John", 30)
+json_string = json.dumps(person.to_json())
+print(json_string)  # Вывод: {"name": "John", "age": 30}
+                    </code></pre>
+                </div>
                 <p>Применение JSON в Python:</p>
                 <ul>
                     <li>Обмен данными между клиентом и сервером: JSON широко используется для передачи данных между веб-приложениями и серверами.</li>
@@ -216,8 +243,8 @@ json_string = json.dumps(data, indent=4, sort_keys=True)
                     <li>Сериализация данных: JSON удобен для сериализации сложных объектов Python.</li>
                     <li>Кэширование данных: JSON можно использовать для хранения временных данных в файлах.</li>
                 </ul>
-
-
+                <h3>Заключение:</h3>
+                <p>JSON — это мощный и гибкий формат данных, который легко использовать в Python благодаря встроенному модулю json. С его помощью можно легко сериализовать и десериализовать данные, а также работать с файлами JSON. Однако важно помнить о поддерживаемых типах данных и особенностях работы с пользовательскими объектами.</p>
                 <nav class="uk-pagination uk-margin">
                     <ul class="uk-pagination">
                         <li><a href="index.html">1</a></li>
