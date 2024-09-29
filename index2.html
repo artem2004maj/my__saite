@@ -84,8 +84,6 @@ print(json_string)  # Вывод: {"name": "John", "age": 30, "city": "New York"
 parsed_data = json.loads(json_string)
 print(parsed_data)  # Вывод: {'name': 'John', 'age': 30, 'city': 'New York'}
                     </code></pre>
-                </div>
-                <div class="uk-card uk-card-default uk-card-body uk-margin-top"></div>
                     <h3 class="uk-card-title">2. Работа с файлами:</h3>
                     <pre><code class="uk-code uk-text-break">
 import json
@@ -105,44 +103,42 @@ with open("data.json", "r") as file:
     loaded_data = json.load(file)
 
 print(loaded_data)  # Вывод: {'name': 'John', 'age': 30, 'city': 'New York'}
-                    </code></pre>
-                </div>
-                <div class="uk-card uk-card-default uk-card-body uk-margin-top"></div>
+                    </code></pre>                                
                     <h3 class="uk-card-title">2. Работа с файлами:</h3>
                     <pre><code class="uk-code uk-text-break">
-                        import json
+import json
 
-                        # Объект Python с вложенными словарями и списками
-                        data = {
-                            "name": "John",
-                            "age": 30,
-                            "city": "New York",
-                            "hobbies": ["reading", "traveling", "sports"],
-                            "address": {
-                                "street": "123 Main St",
-                                "zipcode": "10001"
-                            }
-                        }
+# Объект Python с вложенными словарями и списками
+data = {
+    "name": "John",
+    "age": 30,
+    "city": "New York",
+    "hobbies": ["reading", "traveling", "sports"],
+    "address": {
+        "street": "123 Main St",
+        "zipcode": "10001"
+        }
+}
                         
-                        # Сериализация объекта Python в строку JSON
-                        json_string = json.dumps(data, indent=4)
-                        print(json_string)
+# Сериализация объекта Python в строку JSON
+json_string = json.dumps(data, indent=4)
+print(json_string)
                         
-                        # Вывод:
-                        # {
-                        #     "name": "John",
-                        #     "age": 30,
-                        #     "city": "New York",
-                        #     "hobbies": [
-                        #         "reading",
-                        #         "traveling",
-                        #         "sports"
-                        #     ],
-                        #     "address": {
-                        #         "street": "123 Main St",
-                        #         "zipcode": "10001"
-                        #     }
-                        # }
+# Вывод:
+# {
+#     "name": "John",
+#     "age": 30,
+#     "city": "New York",
+#     "hobbies": [
+#         "reading",
+#         "traveling",
+#         "sports"
+#     ],
+#     "address": {
+#         "street": "123 Main St",
+#         "zipcode": "10001"
+#     }
+# }
                     </code></pre>
                 </div>
                 <p>Применение JSON в Python:</p>
