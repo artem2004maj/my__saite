@@ -19,7 +19,7 @@
 </style>
 <body>
 
-<header class="uk-navbar-container uk-navbar-dark" uk-navbar>
+<header id="navbar" class="uk-navbar-container uk-navbar-dark" uk-navbar>
     <div class="uk-navbar-left">
         <a class="uk-navbar-item uk-logo" href="#">
             <img src="json_pict.png" alt="Логотип" width="100" height="50">
@@ -259,6 +259,23 @@ print(json_string)  # Вывод: {"name": "John", "age": 30}
         <p>© 2024 Ваш сайт. Все права защищены.</p>
     </div>
 </footer>
+
+<script>
+    // Функция для проверки прокрутки и показа/скрытия шапки
+    function toggleNavbar() {
+        const navbar = document.getElementById('navbar');
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > 0) {
+            navbar.classList.add('uk-navbar-sticky');
+        } else {
+            navbar.classList.remove('uk-navbar-sticky');
+        }
+    }
+
+    // Добавляем обработчик события прокрутки
+    window.addEventListener('scroll', toggleNavbar);
+</script>
 
 </body>
 </html>
