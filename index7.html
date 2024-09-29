@@ -9,20 +9,35 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <style>
+        body {
+            background: url('side_pict.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #000; /* Цвет текста на фоне */
+        }
+
+        /* Стили для картинки */
+        .conclusion-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 640px) {
+            .conclusion-image {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<style>
-    body {
-    background: url('side_pict.png') no-repeat center center fixed;
-    background-size: cover;
-    color: #000; /* Цвет текста на фоне */
-}
-</style>
 <body>
 
 <header id="navbar" class="uk-navbar-container uk-navbar-dark" uk-navbar>
     <div class="uk-navbar-left">
         <a class="uk-navbar-item uk-logo" href="#">
-             <img src="json_pict.png" alt="Логотип" width="100" height="50">
+            <img src="json_pict.png" alt="Логотип" width="100" height="50">
         </a>
         <ul class="uk-navbar-nav">
             <li><a href="us.html">О нас</a></li>                
@@ -49,19 +64,17 @@
     <div class="uk-grid uk-grid-match" uk-grid>
         <div class="uk-width-1-1@s">
             <div class="uk-card uk-card-default uk-card-body">
-                <h1>JSON и работа с ним различными языками программирования</h1>
-                <p>В мире цифровых технологий данные — это сердце любого приложения. Именно здесь на сцену выходит JSON (JavaScript Object Notation) — универсальный формат обмена данными, который стал стандартом де-факто в современном программировании. JSON не только упрощает передачу информации между различными платформами и языками программирования, но и делает этот процесс быстрым, эффективным и легко читаемым как для людей, так и для машин.</p>
-                <p>Наш сайт посвящен изучению и практическому применению JSON в различных языках программирования. Здесь вы найдете:</p>
-                <ul>
-                    <li>Подробные руководства по работе с JSON в Python, Java, JavaScript, PHP и C#.</li>
-                    <li>Примеры кода и реальные проекты, демонстрирующие использование JSON в различных сценариях.</li>
-                    <li>Советы и лучшие практики для эффективной работы с JSON.</li>
-                </ul>
-                <div class="uk-text-center">
-                    <div class="uk-inline-clip uk-light" uk-responsive>
-                        <iframe width="720" height="360" src="https://rutube.ru/play/embed/139361dd636108bdcbd85364f6c1625c/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    </div>
-                </div>
+                <h1>Заключение</h1>
+                <p>В мире цифровых технологий, где данные играют ключевую роль, формат JSON (JavaScript Object Notation) стал неотъемлемой частью современного программирования. Благодаря своей простоте и универсальности, JSON обеспечивает эффективный обмен данными между различными платформами и языками программирования, делая процесс передачи информации быстрым, эффективным и легко читаемым как для людей, так и для машин.</p>
+                <p>На моём сайте мы рассмотрели использование и применение JSON в двух популярных языках программирования: Python и JavaScript. В разделе, посвященном Python, мы изучили основные функции модуля json, примеры кода для сериализации и десериализации данных, а также особенности работы с этим модулем. В разделе, посвященном JavaScript, мы рассмотрели встроенные методы JSON.stringify и JSON.parse, а также особенности работы с JSON в этом языке.</p>
+                <p>Несмотря на то, что мой сайт охватывает лишь два языка программирования, принципы работы с JSON во многом схожи и могут быть адаптированы для других языков, таких как Java, PHP, C++, и многих других. JSON является универсальным форматом, который упрощает обмен данными между различными приложениями и сервисами, что делает его незаменимым инструментом в современном программировании.</p>
+                <p>Я надеюсь, что информация, представленная на нашем сайте, поможет вам лучше понять и эффективно использовать JSON в ваших проектах. Независимо от того, являетесь ли вы начинающим разработчиком или опытным профессионалом, знание и умение работать с JSON открывает множество возможностей для создания мощных и гибких приложений.</p>
+                <p>Спасибо за внимание и удачи в ваших программистских начинаниях!</p>
+                <p>С уважением, редактор сайта "JSON и работа с ним различными языками программирования".</p>
+
+                <!-- Добавление картинки -->
+                <img src="kit_ti_mamu_mav.png" alt="Заключение" class="conclusion-image">
+                
                 <nav class="uk-pagination uk-margin">
                     <ul class="uk-pagination">
                         <li><a href="index.html">1</a></li>
