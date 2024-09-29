@@ -156,45 +156,45 @@ print(json_string)
                     <li>None</li>
                 </ul>
                 <p>Десериализация: При десериализации JSON-строки, соответствующие типы данных Python будут следующими:</p>
-                <table class="uk-table uk-table-divider"></table>
+                <table class="uk-table uk-table-divider">
                     <thead>
                         <tr>
-                            <th>JSON</th>
-                            <th>Python</th>
+                            <th>'JSON'</th>
+                            <th>'Python'</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>{}</td>
-                            <td>dict</td>
+                            <td>'{}'</td>
+                            <td>'dict'</td>
                         </tr>
                         <tr>
-                            <td>[]</td>
-                            <td>list</td>
+                            <td>'[]'</td>
+                            <td>'list'</td>
                         </tr>
                         <tr>
-                            <td>{"string"}</td>
-                            <td>str</td>
+                            <td>'{"string"}'</td>
+                            <td>'str'</td>
                         </tr>
                         <tr>
-                            <td>123</td>
-                            <td>int</td>
+                            <td>'123'</td>
+                            <td>'int'</td>
                         </tr>
                         <tr>
-                            <td>123.45</td>
-                            <td>float</td>
+                            <td>'123.45'</td>
+                            <td>'float'</td>
                         </tr>
                         <tr>
-                            <td>true</td>
-                            <td>True</td>
+                            <td>'true'</td>
+                            <td>'True'</td>
                         </tr>
                         <tr>
-                            <td>false</td>
-                            <td>False</td>
+                            <td>'false'</td>
+                            <td>'False'</td>
                         </tr>
                         <tr>
-                            <td>null</td>
-                            <td>None</td>
+                            <td>'null''</td>
+                            <td>'None'</td>
                         </tr>
                     </tbody>
                 </table>
@@ -236,7 +236,7 @@ json_string = json.dumps(person.to_json())
 print(json_string)  # Вывод: {"name": "John", "age": 30}
                     </code></pre>
                 </div>
-                <p>Применение JSON в Python:</p>
+                <h3>Применение JSON в Python:</h3>
                 <ul>
                     <li>Обмен данными между клиентом и сервером: JSON широко используется для передачи данных между веб-приложениями и серверами.</li>
                     <li>Конфигурационные файлы: JSON можно использовать для хранения настроек приложений.</li>
