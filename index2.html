@@ -52,23 +52,21 @@
     <div class="uk-grid uk-grid-match" uk-grid>
         <div class="uk-width-1-1@s">
             <div class="uk-card uk-card-default uk-card-body">
-                <h1>JSON и работа с ним различными языками программирования</h1>
-                <p>В мире цифровых технологий данные — это сердце любого приложения. Именно здесь на сцену выходит JSON (JavaScript Object Notation) — универсальный формат обмена данными, который стал стандартом де-факто в современном программировании. JSON не только упрощает передачу информации между различными платформами и языками программирования, но и делает этот процесс быстрым, эффективным и легко читаемым как для людей, так и для машин.</p>
-                <p>Наш сайт посвящен изучению и практическому применению JSON в различных языках программирования. Здесь вы найдете:</p>
+                <h1>JSON в Python</h1>
+                <h2>Использование и применение JSON в Python</h2>
+                <p>JSON (JavaScript Object Notation) - это легковесный формат обмена данными, который легко читается и пишется как людьми, так и машинами. Python имеет встроенную поддержку работы с JSON через модуль json.</p>
+                <p>Основные функции модуля json:</p>
                 <ul>
-                    <li>Подробные руководства по работе с JSON в Python, Java, JavaScript, PHP и C#.</li>
-                    <li>Примеры кода и реальные проекты, демонстрирующие использование JSON в различных сценариях.</li>
-                    <li>Советы и лучшие практики для эффективной работы с JSON.</li>
+                    <li>'json.dumps(obj)': Сериализует объект Python в строку JSON.</li>
+                    <li>'json.loads(s)': Десериализует строку JSON в объект Python.</li>
+                    <li>'json.dump(obj, fp)': Сериализует объект Python в файл в формате JSON.</li>
+                    <li>'json.load(fp)': Десериализует файл JSON в объект Python.</li>
                 </ul>
-                <div class="uk-text-center">
-                    <div class="uk-inline-clip uk-light" uk-responsive>
-                        <iframe width="720" height="360" src="https://rutube.ru/play/embed/139361dd636108bdcbd85364f6c1625c/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    </div>
-                </div>
+                <h2>Примеры кода:</h2>
 
                 <!-- Пример кода Python -->
                 <div class="uk-card uk-card-default uk-card-body uk-margin-top">
-                    <h3 class="uk-card-title">Пример кода на Python</h3>
+                    <h3 class="uk-card-title">1. Сериализация и десериализация строк:</h3>
                     <pre><code class="uk-code uk-text-break">
 import json
 
@@ -78,15 +76,83 @@ data = {
     "age": 30,
     "city": "New York"
 }
-
+                        
 json_string = json.dumps(data)
 print(json_string)  # Вывод: {"name": "John", "age": 30, "city": "New York"}
-
+                        
 # Десериализация строки JSON в объект Python
 parsed_data = json.loads(json_string)
 print(parsed_data)  # Вывод: {'name': 'John', 'age': 30, 'city': 'New York'}
                     </code></pre>
                 </div>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top"></div>
+                    <h3 class="uk-card-title">2. Работа с файлами:</h3>
+                    <pre><code class="uk-code uk-text-break">
+import json
+
+# Сериализация объекта Python в файл JSON
+data = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+with open("data.json", "w") as file:
+    json.dump(data, file)
+
+# Десериализация файла JSON в объект Python
+with open("data.json", "r") as file:
+    loaded_data = json.load(file)
+
+print(loaded_data)  # Вывод: {'name': 'John', 'age': 30, 'city': 'New York'}
+                    </code></pre>
+                </div>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top"></div>
+                    <h3 class="uk-card-title">2. Работа с файлами:</h3>
+                    <pre><code class="uk-code uk-text-break">
+                        import json
+
+                        # Объект Python с вложенными словарями и списками
+                        data = {
+                            "name": "John",
+                            "age": 30,
+                            "city": "New York",
+                            "hobbies": ["reading", "traveling", "sports"],
+                            "address": {
+                                "street": "123 Main St",
+                                "zipcode": "10001"
+                            }
+                        }
+                        
+                        # Сериализация объекта Python в строку JSON
+                        json_string = json.dumps(data, indent=4)
+                        print(json_string)
+                        
+                        # Вывод:
+                        # {
+                        #     "name": "John",
+                        #     "age": 30,
+                        #     "city": "New York",
+                        #     "hobbies": [
+                        #         "reading",
+                        #         "traveling",
+                        #         "sports"
+                        #     ],
+                        #     "address": {
+                        #         "street": "123 Main St",
+                        #         "zipcode": "10001"
+                        #     }
+                        # }
+                    </code></pre>
+                </div>
+                <p>Применение JSON в Python:</p>
+                <ul>
+                    <li>Обмен данными между клиентом и сервером: JSON широко используется для передачи данных между веб-приложениями и серверами.</li>
+                    <li>Конфигурационные файлы: JSON можно использовать для хранения настроек приложений.</li>
+                    <li>Сериализация данных: JSON удобен для сериализации сложных объектов Python.</li>
+                    <li>Кэширование данных: JSON можно использовать для хранения временных данных в файлах.</li>
+                </ul>
+
 
                 <nav class="uk-pagination uk-margin">
                     <ul class="uk-pagination">
