@@ -25,8 +25,8 @@
              <img src="json_pict.png" alt="Логотип" width="100" height="50">
         </a>
         <ul class="uk-navbar-nav">
-            <li><a href="#">О нас</a></li>                
-            <li><a href="#">Контакты</a></li>
+            <li><a href="us.html">О нас</a></li>                
+            <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <a href="#offcanvas-slide" class="uk-navbar-toggle" uk-toggle><span uk-icon="icon: menu"></span></a>
     </div>
@@ -39,10 +39,7 @@
         <ul class="uk-list uk-list-divider">
             <li><a href="index.html">Введение</a></li>
             <li><a href="index2.html">JSON в Python</a></li>
-            <li><a href="index3.html">JSON в Java</a></li>
             <li><a href="index4.html">JSON в JavaScript</a></li>
-            <li><a href="index5.html">JSON в PHP</a></li>
-            <li><a href="index6.html">JSON в C++</a></li>
             <li><a href="index7.html">Заключение</a></li>
         </ul>
     </div>
@@ -52,28 +49,179 @@
     <div class="uk-grid uk-grid-match" uk-grid>
         <div class="uk-width-1-1@s">
             <div class="uk-card uk-card-default uk-card-body">
-                <h1>JSON и работа с ним различными языками программирования</h1>
-                <p>В мире цифровых технологий данные — это сердце любого приложения. Именно здесь на сцену выходит JSON (JavaScript Object Notation) — универсальный формат обмена данными, который стал стандартом де-факто в современном программировании. JSON не только упрощает передачу информации между различными платформами и языками программирования, но и делает этот процесс быстрым, эффективным и легко читаемым как для людей, так и для машин.</p>
-                <p>Наш сайт посвящен изучению и практическому применению JSON в различных языках программирования. Здесь вы найдете:</p>
+                <h1>JSON в JavaScript</h1>
+                <p>JSON (JavaScript Object Notation) — это легковесный формат обмена данными, который легко читается и пишется как людьми, так и машинами. В JavaScript JSON поддерживается нативно, что делает его очень удобным для работы с данными.</p>
+                <p>Основные функции для работы с JSON в JavaScript:</p>
                 <ul>
-                    <li>Подробные руководства по работе с JSON в Python, Java, JavaScript, PHP и C#.</li>
-                    <li>Примеры кода и реальные проекты, демонстрирующие использование JSON в различных сценариях.</li>
-                    <li>Советы и лучшие практики для эффективной работы с JSON.</li>
+                    <li>JSON.stringify(value): Сериализует объект JavaScript в строку JSON.</li>
+                    <li>JSON.parse(text): Десериализует строку JSON в объект JavaScript.</li>
                 </ul>
-                <div class="uk-text-center">
-                    <div class="uk-inline-clip uk-light" uk-responsive>
-                        <iframe width="720" height="360" src="https://rutube.ru/play/embed/139361dd636108bdcbd85364f6c1625c/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    </div>
+                <h2>Примеры кода:</h2>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <h3 class="uk-card-title">1. Сериализация и десериализация строк:</h3>
+                    <pre><code class="uk-code uk-text-break">
+// Сериализация объекта JavaScript в строку JSON
+const data = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+                        
+const jsonString = JSON.stringify(data);
+console.log(jsonString);  // Вывод: {"name":"John","age":30,"city":"New York"}
+                        
+// Десериализация строки JSON в объект JavaScript
+const parsedData = JSON.parse(jsonString);
+console.log(parsedData);  // Вывод: {name: "John", age: 30, city: "New York"}
+                    </code></pre>
+                    <h3 class="uk-card-title">2. Работа с более сложными объектами:</h3>
+                    <pre><code class="uk-code uk-text-break">
+// Объект JavaScript с вложенными объектами и массивами
+    const data = {
+        name: "John",
+        age: 30,
+        city: "New York",
+        hobbies: ["reading", "traveling", "sports"],
+        address: {
+            street: "123 Main St",
+            zipcode: "10001"
+        }
+};
+                        
+// Сериализация объекта JavaScript в строку JSON
+    const jsonString = JSON.stringify(data, null, 4);
+    console.log(jsonString);
+                        
+// Вывод:
+// {
+//     "name": "John",
+//     "age": 30,
+//     "city": "New York",
+//     "hobbies": [
+//         "reading",
+//         "traveling",
+//         "sports"
+//     ],
+//     "address": {
+//         "street": "123 Main St",
+//         "zipcode": "10001"
+//     }
+// }                  
+                    </code></pre>
                 </div>
+                <h2>Особенности использования JSON в JavaScript:</h2>
+                <h3>Поддерживаемые типы данных:</h3>
+                <p>Сериализация: JSON.stringify поддерживает сериализацию следующих типов данных JavaScript:</p>
+                <ul>
+                    <li>Object</li>
+                    <li>Array</li>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                    <li>null</li>
+                </ul>
+                <p>Десериализация: При десериализации JSON-строки, соответствующие типы данных JavaScript будут следующими:</p>
+                <table class="uk-table uk-table-divider">
+                    <thead>
+                        <tr>
+                            <th>'JSON'</th>
+                            <th>'JavaScript'</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>'{}'</td>
+                            <td>'dict'</td>
+                        </tr>
+                        <tr>
+                            <td>'[]'</td>
+                            <td>'list'</td>
+                        </tr>
+                        <tr>
+                            <td>'"string"'</td>
+                            <td>'str'</td>
+                        </tr>
+                        <tr>
+                            <td>'123'</td>
+                            <td>'int'</td>
+                        </tr>
+                        <tr>
+                            <td>'true'</td>
+                            <td>'Boolean'</td>
+                        </tr>
+                        <tr>
+                            <td>'false'</td>
+                            <td>'Boolean'</td>
+                        </tr>
+                        <tr>
+                            <td>'null''</td>
+                            <td>'null'</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Форматирование JSON</h3>
+                <p>При сериализации можно использовать второй и третий аргументы метода JSON.stringify:</p>
+                <ul>
+                    <li>Второй аргумент (replacer) — функция, которая изменяет поведение процесса сериализации, или массив ключей, которые должны быть сериализованы.</li>
+                    <li>Третий аргумент (space) — строка или число, которое используется для вставки пробелов в вывод JSON для улучшения читаемости.</li>
+                </ul>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <h3 class="uk-card-title">Код</h3>
+                    <pre><code class="uk-code uk-text-break">
+const jsonString = JSON.stringify(data, null, 4);
+                    </code></pre>
+                </div>    
+                <h3>Обработка ошибок:</h3>
+                <p>При десериализации некорректной JSON-строки будет выброшено исключение SyntaxError.</p>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <h3 class="uk-card-title">Код</h3>
+                    <pre><code class="uk-code uk-text-break">
+try {
+    const parsedData = JSON.parse('{"name": "John", "age": 30,}');
+} catch (e) {
+    console.error("Ошибка десериализации JSON:", e);
+}
+                    </code></pre>
+                </div>
+                <h3>Работа с пользовательскими объектами:</h3>
+                <p>По умолчанию JSON.stringify не может сериализовать функции, символы и значения undefined. Для этого можно использовать второй аргумент replacer, чтобы определить, как обрабатывать такие значения.</p>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top">
+                    <h3 class="uk-card-title">Код</h3>
+                    <pre><code class="uk-code uk-text-break">
+const data = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    sayHello: function() {
+        console.log("Hello!");
+    }
+};
+                        
+const jsonString = JSON.stringify(data, (key, value) => {
+    if (typeof value === 'function') {
+        return value.toString();
+    }
+    return value;
+});
+                        
+console.log(jsonString);
+                    </code></pre>
+                </div>
+                <h3>Применение JSON в JavaScript:</h3>
+                <ul>
+                    <li>Обмен данными между клиентом и сервером: JSON широко используется для передачи данных между веб-приложениями и серверами.</li>
+                    <li>Хранение данных в локальном хранилище: JSON можно использовать для хранения данных в localStorage или sessionStorage.</li>
+                    <li>Сериализация данных: JSON удобен для сериализации сложных объектов JavaScript.</li>
+                    <li>Конфигурационные файлы: JSON можно использовать для хранения настроек приложений.</li>
+                </ul>
+                <h3>Заключение:</h3>
+                <p>JSON — это мощный и гибкий формат данных, который легко использовать в JavaScript благодаря встроенной поддержке. С его помощью можно легко сериализовать и десериализовать данные, а также работать с файлами JSON. Однако важно помнить о поддерживаемых типах данных и особенностях работы с пользовательскими объектами.</p>
                 <nav class="uk-pagination uk-margin">
                     <ul class="uk-pagination">
                         <li><a href="index.html">1</a></li>
                         <li><a href="index2.html">2</a></li>
-                        <li><a href="index3.html">3</a></li>
-                        <li><a href="index4.html">4</a></li>
-                        <li><a href="index5.html">5</a></li>
-                        <li><a href="index6.html">6</a></li>
-                        <li><a href="index7.html">7</a></li>
+                        <li><a href="index4.html">3</a></li>
+                        <li><a href="index7.html">4</a></li>
                     </ul>
                 </nav>
             </div>
