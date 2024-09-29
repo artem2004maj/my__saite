@@ -104,7 +104,7 @@ with open("data.json", "r") as file:
 
 print(loaded_data)  # Вывод: {'name': 'John', 'age': 30, 'city': 'New York'}
                     </code></pre>                                
-                    <h3 class="uk-card-title">2. Работа с файлами:</h3>
+                    <h3 class="uk-card-title">3. Работа с более сложными объектами:</h3>
                     <pre><code class="uk-code uk-text-break">
 import json
 
@@ -141,6 +141,74 @@ print(json_string)
 # }
                     </code></pre>
                 </div>
+                <h2>Особенности использования модуля json в Python:</h2>
+                <h3>Поддерживаемые типы данных:</h3>
+                <p>Сериализация: Модуль json поддерживает сериализацию следующих типов данных Python:</p>
+                <ul>
+                    <li>dict</li>
+                    <li>list</li>
+                    <li>tuple</li>
+                    <li>str</li>
+                    <li>int</li>
+                    <li>float</li>
+                    <li>True</li>
+                    <li>False</li>
+                    <li>None</li>
+                </ul>
+                <p>Десериализация: При десериализации JSON-строки, соответствующие типы данных Python будут следующими:</p>
+                <table class="uk-table uk-table-divider"></table>
+                    <thead>
+                        <tr>
+                            <th>JSON</th>
+                            <th>Python</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{}</td>
+                            <td>dict</td>
+                        </tr>
+                        <tr>
+                            <td>[]</td>
+                            <td>list</td>
+                        </tr>
+                        <tr>
+                            <td>{"string"}</td>
+                            <td>str</td>
+                        </tr>
+                        <tr>
+                            <td>123</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td>123.45</td>
+                            <td>float</td>
+                        </tr>
+                        <tr>
+                            <td>true</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>false</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>null</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Форматирование JSON</h3>
+                <div class="uk-card uk-card-default uk-card-body uk-margin-top"></div>
+                    <p class="uk-card-title">При сериализации можно использовать параметр indent для форматирования вывода JSON с отступами:</p>
+                    <pre><code class="uk-code uk-text-break">
+json_string = json.dumps(data, indent=4)
+                    </code></pre>
+                    <p class="uk-card-title">Также можно использовать параметр sort_keys для сортировки ключей в словаре:</p>
+                    <pre><code class="uk-code uk-text-break">
+                        json_string = json.dumps(data, indent=4, sort_keys=True)
+                    </code></pre>
+                 
                 <p>Применение JSON в Python:</p>
                 <ul>
                     <li>Обмен данными между клиентом и сервером: JSON широко используется для передачи данных между веб-приложениями и серверами.</li>
